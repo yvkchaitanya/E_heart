@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .navbar h1 {
+      color: white;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-container {
+      width: 50%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container button {
+      padding: 10px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Heart Disease Prediction</h1>
+  </div>
+
+  <div class="form-container">
+    <h2>Enter the following details to predict heart disease:</h2>
+    <form method="POST" action="/predict">
+      <label for="cp_0">cp_0 (typical chest pain):</label>
+      <input type="number" id="cp_0" name="cp_0" required>
+
+      <label for="cp_1">cp_1 (atypical chest pain):</label>
+      <input type="number" id="cp_1" name="cp_1" required>
+
+      <label for="cp_2">cp_2 (non-anginal pain):</label>
+      <input type="number" id="cp_2" name="cp_2" required>
+
+      <label for="cp_3">cp_3 (asymptomatic):</label>
+      <input type="number" id="cp_3" name="cp_3" required>
+
+      <label for="trestbps">Trestbps (resting blood pressure):</label>
+      <input type="number" id="trestbps" name="trestbps" required>
+
+      <label for="chol">Cholesterol level:</label>
+      <input type="number" id="chol" name="chol" required>
+
+      <label for="fbs_0">fbs_0 (fasting blood sugar < 120 mg/dl):</label>
+      <input type="number" id="fbs_0" name="fbs_0" required>
+
+      <label for="fbs_1">fbs_1 (fasting blood sugar > 120 mg/dl):</label>
+      <input type="number" id="fbs_1" name="fbs_1" required>
+
+      <label for="restecg_0">Resting electrocardiographic results (normal):</label>
+      <input type="number" id="restecg_0" name="restecg_0" required>
+
+      <label for="restecg_1">Resting electrocardiographic results (abnormal):</label>
+      <input type="number" id="restecg_1" name="restecg_1" required>
+
+      <label for="restecg_2">Resting electrocardiographic results (hypertrophy):</label>
+      <input type="number" id="restecg_2" name="restecg_2" required>
+
+      <label for="thalach">Thalach (maximum heart rate achieved):</label>
+      <input type="number" id="thalach" name="thalach" required>
+
+      <label for="exang_0">Exang_0 (no exercise induced angina):</label>
+      <input type="number" id="exang_0" name="exang_0" required>
+
+      <label for="exang_1">Exang_1 (exercise induced angina):</label>
+      <input type="number" id="exang_1" name="exang_1" required>
+
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+
+</body>
+</html>
